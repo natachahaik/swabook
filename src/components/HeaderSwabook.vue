@@ -32,7 +32,7 @@ header {
 
 .titre-header h1 {
   font-style: normal;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 25px;
   line-height: 38px;
 }
@@ -53,7 +53,6 @@ header {
   display: flex;
   justify-content: end;
   font-style: normal;
-  font-weight: bold;
   font-size: 15px;
   line-height: 22px;
   padding: 40px 10px;

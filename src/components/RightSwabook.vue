@@ -4,7 +4,6 @@
       <h1>Penser. Lire. Vivre.</h1>
       <p>Un livre vous attend.</p>
     </span>
-
     <form-swabook />
   </section>
 </template>
@@ -19,6 +18,7 @@ import FormSwabook from "@/components/FormSwabook.vue";
   justify-content: flex-end;
   flex-direction: column;
   line-height: 2px;
+  height: 400px;
 }
 
 .title {

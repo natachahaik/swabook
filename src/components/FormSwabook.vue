@@ -1,11 +1,24 @@
 <template>
   <div class="recherche">
     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-    <input type="text" placeholder="Titre ou auteur" />
-    <button>Rechercher</button>
+    <form @submit="handleInputChange">
+      <input type="text" placeholder="Titre ou auteur" v-model="search" />
+      <button>Rechercher</button>
+    </form>
   </div>
 </template>
 
+<script setup lang="ts">
+import { ref } from "vue";
+import { useRouter } from "vue-router";
+
+const search = ref("");
+
+const router = useRouter();
+const handleInputChange = () => {
+  router.push({ name: "SearchPageSwabook", params: { search: search.value } });
+};
+</script>
 <style scoped>
 .recherche {
   background: #fffcfc;
@@ -15,6 +28,10 @@
   margin-right: 8%;
   margin-top: 3%;
   padding: 20px;
+}
+
+form{
+  display: flex;
 }
 
 input {
