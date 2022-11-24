@@ -1,20 +1,3 @@
-<template>
-  <section class="card">
-   
-    <div class="card__avatar">
-      <div class="rm-image__container">
-        <img class="card__avatar__image" :src="imageCard" alt="card" />
-      </div>
-    </div>
-
-    <div class="title">
-      {{ title }}
-    </div>
-    <div class="author">
-      {{ author }}
-    </div>
-  </section>
-</template>
 <script setup lang="ts">
 import { defineProps, computed } from "vue";
 import Monlogo from "@/images/Monlogo.png";
@@ -30,48 +13,57 @@ const imageCard = computed(() =>
 );
 </script>
 
+<template>
+  <section class="card">
+    <div class="rm-image__container">
+      <img class="card__avatar__image" :src="imageCard" alt="card" />
+    </div>
+
+    <div class="title">
+      {{ title }}
+    </div>
+    <div class="author">
+      {{ author }}
+    </div>
+  </section>
+</template>
+
 <style scoped>
 .card {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  box-shadow: 0 7px 14px rgb(0 0 0 / 4%);
-  width: 150px;
-  height: 300px;
   cursor: pointer;
-  background-color:white;
+  background-color: #f8f7ff;
+  margin: 20px;
   display: flex;
-}
-
-.card__avatar {
-  width: 100%;
-  height: 100%;
-  background-color: white;
+  flex-direction: column;
 }
 
 .rm-image__container {
-  width: 100%;
+  width: 304px;
+  height: 250px;
+  padding: 15px;
+  background-color: #f8f7ff;
 }
+
 img {
+  box-shadow: 0 7px 14px rgb(0 0 0 / 4%);
   width: 100%;
+  height: 100%;
+  border-radius: 15%;
+  background-color: #f8f7ff;
 }
 
 .title {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 30px;
-  font-family: poppins;
-  background-color: white;
-  color: black;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 15px 10px;
+  font-weight: 600;
+  max-width: 280px;
 }
 
 .author {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 10px;
-  background-color: bisque;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <router-link :to="{ name: 'HomePage' }">Retour</router-link>
-  <container class="bookitem">
+  <div class="bookitem-list">
     <book-item
       v-for="book in books"
       :title="book.title"
@@ -9,9 +9,8 @@
       :key="book.title"
     >
     </book-item>
-  </container>
+  </div>
 
-  <div>SearchPage {{ search }}</div>
 </template>
 
 <script setup lang="ts">
@@ -29,11 +28,7 @@ const books = ref(await getBooks(props.search));
 </script>
 
 <style scoped>
-.bookitem{
- 
-  overflow: scroll;
-}
-.bookitem {
+.bookitem-list {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;

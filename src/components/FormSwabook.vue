@@ -30,7 +30,7 @@ const handleInputChange = () => {
   padding: 20px;
 }
 
-form{
+form {
   display: flex;
 }
 

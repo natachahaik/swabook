@@ -5,15 +5,18 @@ import HeaderSwabook from "@/components/HeaderSwabook.vue";
 
 <template>
   <header-swabook />
-  <Suspense>
-    <!-- component with nested async dependencies -->
-    <div class="suspense">
-      <router-view />
-    </div>
 
-    <!-- loading state via #fallback slot -->
-    <template #fallback> Loading... </template>
-  </Suspense>
+  <router-view v-slot="{ Component }">
+    <Suspense :timeout="0">
+      <!-- component with nested async dependencies -->
+      <div class="suspense">
+        <component :is="Component" />
+      </div>
+
+      <!-- loading state via #fallback slot -->
+      <template #fallback> Loading... </template>
+    </Suspense>
+  </router-view>
 </template>
 
 <style>
@@ -21,7 +24,6 @@ import HeaderSwabook from "@/components/HeaderSwabook.vue";
 
 html,
 body {
-  overflow: hidden;
   background-color: #f8f7ff;
   width: 100%;
   font-family: "Poppins", serif;

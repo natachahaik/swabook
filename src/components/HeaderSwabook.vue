@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="titre-header">
-      <h1>Swaboo</h1>
+      <h1>Swabook</h1>
     </div>
 
     <div class="icone-header">
@@ -32,7 +32,7 @@ header {
 
 .titre-header h1 {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 25px;
   line-height: 38px;
 }
