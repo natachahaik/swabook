@@ -1,6 +1,6 @@
 <template>
   <div class="image">
-    <img src="girlread.png" alt="fille" />
+    <img src="@/images/girlread.png" alt="fille" />
   </div>
 </template>
 

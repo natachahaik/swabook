@@ -5,12 +5,12 @@
     </div>
 
     <div class="icone-header">
-      <img src="malette.png" alt="l'icone" />
+      <img src="@/images/malette.png" alt="l'icone" />
     </div>
 
     <span class="user-header">
       <h1 class="name">Euphemia Caldwell</h1>
-      <img src="natacha.jpeg" alt="image de natacha" />
+      <img src="@/images/natacha.jpeg" alt="image de natacha" />
     </span>
   </header>
 </template>
