@@ -9,7 +9,7 @@
     </div>
 
     <span class="user-header">
-      <h1 class="name">Euphemia Caldwell</h1>
+      <h1 class="name">Natacha Haïk</h1>
       <img src="@/images/natacha.jpeg" alt="image de natacha" />
     </span>
   </header>
