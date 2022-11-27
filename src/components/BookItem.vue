@@ -50,6 +50,7 @@ img {
   height: 100%;
   border-radius: 15%;
   background-color: #f8f7ff;
+  object-fit: contain;
 }
 
 .title {
